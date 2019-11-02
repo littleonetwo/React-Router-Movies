@@ -30,15 +30,17 @@ const MovieList = props => {
 
 function MovieDetails({ movie, select, setSelect }) {
   const { title, director, metascore, stars } = movie;
-  console.log(movie);
   const ref = `/movies/${movie.id}`;
+
   function movieSelect(){
       setSelect(movie.id);
       console.log(movie.select);
   }
 
+  console.log(movie)
+
   return (
-    <Link to={ref} onClick={movieSelect}>
+    <Link to={ref} >
       <div className="movie-card">
         <h2>{title}</h2>
         <div className="movie-director">
