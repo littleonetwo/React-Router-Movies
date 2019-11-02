@@ -28,11 +28,7 @@ const App = () => {
           />}
         />
 
-        <Route path= "/movies/:id" render={props =>
-          <Movie
-            {...props}
-            select={select}
-          />}
+        <Route path= "/movies/:id" component ={Movie}
         />
 
 
