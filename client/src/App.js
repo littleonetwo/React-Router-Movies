@@ -11,21 +11,17 @@ const App = () => {
   const [savedList, setSavedList] = useState( [] );
   const [select, setSelect] = useState(' ');
 
-  const addToSavedList = movie => {
-    setSavedList( [...savedList, movie] );
-  };
-
   return (
     <div>
       <SavedList list={savedList} />
 
         <Route exact path="/" render={props =>
-          <MovieList
-          {...props}
-          select ={select}
-          setSelect = {setSelect}
 
-          />}
+          <MovieList
+            {...props}
+          />
+        }
+
         />
 
         <Route path= "/movies/:id" component ={Movie}
